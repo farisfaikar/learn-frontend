@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #0a0a0b;
+  --clr-secondary: #2e3038;
+  --clr-accent: #fbe850;
+  --clr-text: #ffffff;
+  --clr-text-dim: #5c5c5c;
+}
+
+p,
+a {
+  font-family: "Inter", "Arial";
+  color: var(--clr-text-dim);
+}
+
+p {
+  font-size: small;
+}
+
+/* ================= Navbar ================= */
+
+body {
+  background-color: var(--clr-primary);
+  color: var(--clr-text);
+  margin: 0;
+  font-family: "Prata", "Times New Roman";
+}
+
+nav {
+  background: var(--clr-primary);
+  padding: 0 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  font-size: small;
+  margin: 0.625rem 0.625rem;
+  margin: 0 0.625rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  height: 0.125rem;
+  width: 0;
+  background-color: var(--clr-text);
+  position: absolute;
+  left: 0;
+  bottom: -0.3125rem;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: var(--clr-text);
+}
+
+button {
+  padding: 0.625rem 1.25rem;
+  background-color: var(--clr-accent);
+  border: none;
+  font-family: "Prata", "Times New Roman";
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--clr-text-dim);
+}
+
+section {
+  padding-inline: 10%;
+  padding-block: 1.25rem;
+}
+
+.logo {
+  font-family: "Prata", "Times New Roman";
+  color: var(--clr-text);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header {
+  padding-right: 33.33%;
+}
+
+.header > h1 {
+  font-size: clamp(1rem, 2rem, 3rem);
+}
+
+.header > p {
+  font-size: clamp(0.5rem, 1rem, 2rem);
+}
+
+.brands {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brands > img {
+  max-height: 0.9375rem;
+}
+
+.websites {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.card:first-child {
+  padding-right: 4%;
+}
+
+.card:last-child {
+  padding-left: 4%;
+}
+
+.card > * {
+  margin-block: 0.3125rem;
+}
+
+.card > img {
+  max-width: 100%;
+}
+
+.card > a {
+  font-family: "Prata", "Times New Roman";
+  color: var(--clr-text);
+  text-decoration: none;
+}
+
+.card > p {
+  margin-top: 0;
+}
